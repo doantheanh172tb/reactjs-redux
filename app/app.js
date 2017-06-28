@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import List from './components/List';
 var {Provider} = require('react-redux');
-const store = require('./Reducers');
+const store = require('./storeConf');
 
 ReactDOM.render(
     <Provider store={store}>
