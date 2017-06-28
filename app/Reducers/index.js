@@ -1,4 +1,3 @@
-// import redux from 'redux';
 import { createStore, combineReducers, compose } from 'redux';
 const listReducer = (list = ['Android', 'iOS', 'Windows', 'NodeJS'], action) => {
     switch (action.type){
@@ -29,18 +28,18 @@ const store = createStore(reducer, compose(
    window.devToolsExtension? window.devToolsExtension(): f => f
 ));
 
-store.dispatch({
-    type: 'TOGGLE_IS_ADDING'
-});
-
-store.dispatch({
-   type: 'ADD_ITEM',
-    item: 'AAAA'
-});
-
-store.dispatch({
-    type: 'REMOVE_ITEM',
-    index: 1
-});
+// store.dispatch({
+//     type: 'TOGGLE_IS_ADDING'
+// });
+//
+// store.dispatch({
+//    type: 'ADD_ITEM',
+//     item: 'AAAA'
+// });
+//
+// store.dispatch({
+//     type: 'REMOVE_ITEM',
+//     index: 1
+// });
 
 module.exports = store;
