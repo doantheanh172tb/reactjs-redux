@@ -6,6 +6,10 @@ const listReducer = (list = ['Android', 'iOS', 'Windows', 'NodeJS'], action) => 
             return list.filter((e, i) => i != action.index);
         default:
             return list;
+
+
+
+
     }
 };
 

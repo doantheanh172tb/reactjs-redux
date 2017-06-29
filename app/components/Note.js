@@ -1,12 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {removeItem} from '../actions';
 
 class Note extends React.Component{
 
     removeNote(){
         let {index, dispatch} = this.props;
         console.log('Note::removeNote.dispatch.REMOVE_ITEM');
-        dispatch({type: 'REMOVE_ITEM', index});
+        dispatch(removeItem(index));
     };
 
     render(){

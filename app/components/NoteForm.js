@@ -1,18 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {toggle, addItem} from '../actions';
 
 class NoteForm extends React.Component{
     handleSubmit(e){
         e.preventDefault();//not refresh page
         console.log('NoteForm::handleSubmit.dispatch.ADD_ITEM');
         const {dispatch} = this.props;
-        dispatch({type: 'ADD_ITEM', item: this.refs.txt.value});
-        dispatch({type: 'TOGGLE_IS_ADDING'});
+        dispatch(addItem(this.refs.txt.value));
+        dispatch(toggle());
     }
     toggle(){
         console.log('NoteForm::toggle.dispatch.TOGGLE_IS_ADDING');
         const {dispatch} = this.props;
-        dispatch({type: 'TOGGLE_IS_ADDING'});
+        dispatch(toggle());
     }
     render(){
         if(this.props.isAdding) return <form onSubmit={this.handleSubmit.bind(this)}>
